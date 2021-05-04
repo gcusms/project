@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opencv_storage>
+   <camera-matrix type_id="opencv-matrix">
+      <rows>3</rows>
+      <cols>3</cols>
+      <dt>d</dt>
+      <data>789.9366881379731922 0.0000000000000000 301.3964268354754381 
+0.0000000000000000 741.6656281419612924 254.7283394477074410 
+0.0000000000000000 0.0000000000000000 1.0000000000000000 
+</data>
+   </camera-matrix>
+   <distortion type_id="opencv-matrix">
+      <rows>5</rows>
+      <cols>1</cols>
+      <dt>d</dt>
+      <data>-0.0254561969059528 0.1266428218690624 0.0000000000000000 0.0000000000000000 0.0000000000000000 </data>
+   </distortion>
+</opencv_storage>
