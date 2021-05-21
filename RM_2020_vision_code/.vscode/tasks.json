@@ -1,0 +1,72 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+        "tasks": [
+            {
+                "type": "shell",
+                "label": "build",
+                "command": "g++",
+                "args": [
+                    "-std=c++11",
+                    "-static-libgcc", // 静态链接
+                    "-Wall", // 开启额外警告
+                    //include Path
+                    "-I","${workspaceFolder}/",
+                    "-I","${workspaceFolder}/armor/",
+                    "-I","${workspaceFolder}/camera/",
+                    "-I","${workspaceFolder}/control/",
+                    "-I","${workspaceFolder}/detect_buff",
+                    "-I","${workspaceFolder}/filter/",
+                    "-I","${workspaceFolder}/serial/",
+                    "-I","${workspaceFolder}/solve_PNP/",
+                    "-I","${workspaceFolder}/vedio/",
+                    "-I","${workspaceFolder}/fps/",
+                    "-I","${workspaceFolder}/pinhole/",
+                    "-I","${workspaceFolder}/data_exchange/",
+                    "-I","/usr/local/include/",
+                    "-I","/usr/local/include/opencv4/",
+                    "-I","/usr/local/include/opencv4/opencv2/",
+                    // "-I","/home/rcxxx/workspace/tensorflow/",
+                    // "-I","/home/rcxxx/workspace/tensorflow/bazel-genfiles/",
+                    // "-I","/home/rcxxx/workspace/tensorflow/tensorflow/contrib/makefile/downloads/",
+                    // "-I","/home/rcxxx/workspace/tensorflow/tensorflow/contrib/makefile/downloads/eigen/",
+                    // "-I","/home/rcxxx/workspace/tensorflow/tensorflow/contrib/makefile/downloads/absl/",
+                    // "-I","/home/rcxxx/workspace/tensorflow/tensorflow/contrib/makefile/downloads/protobuf/",
+                    // "-I","/home/rcxxx/workspace/tensorflow/tensorflow/contrib/makefile/downloads/protobuf/src/",
+                    //sources files Path
+                    "-g",
+                    "${workspaceFolder}/armor/rm_armorfitted.cpp",
+                    "${workspaceFolder}/detect_buff/buff_detect.cpp",
+                    "${workspaceFolder}/filter/rm_kalmanfilter.cpp",
+                    "${workspaceFolder}/camera/rm_videocapture.cpp",
+                    "${workspaceFolder}/control/rm_link.cpp",
+                    "${workspaceFolder}/serial/serialport.cpp",
+                    "${workspaceFolder}/solve_PNP/solve_pnp.cpp",
+                    "${workspaceFolder}/fps/fps.cpp",
+                    "${workspaceFolder}/pinhole/pinhole.cpp",
+                    "${workspaceFolder}/data_exchange/data_exchange.cpp",
+                    "${workspaceFolder}/main.cpp",
+                    "-o", 
+                    "${workspaceFolder}run.o",//输出的文件名称以及路径
+                    //lib
+                    "/usr/local/lib/libopencv_*",
+                    // "/usr/local/lib/libtensorflow_cc.so",
+                    // "${workspaceFolder}/lib/./libMVSDK.so",
+                    "/lib/libMVSDK.so",
+                    //"`pkg-config --cflags --libs protobuf`",
+                    // "`pkg-config","--cflags","--libs","protobuf`",
+                ],
+                "options": {
+                    "cwd": "/usr/bin"
+                },
+                "problemMatcher": [
+                    "$gcc"
+                ],
+                "group": {
+                    "kind": "build",
+                    "isDefault": true
+                }
+            }
+        ]
+}
