@@ -1,0 +1,5 @@
+Log file created at: 2021/05/12 20:37:17
+Running on machine: sms
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+W0512 20:37:17.750717 11187 MVCameraBase.cpp:98] Device:(name:MV-SUA134GC#0 sn:040103120489)Lost
+W0512 20:37:17.991712 11187 MVCameraBase.cpp:118] Device:(name:MV-SUA134GC#0 sn:040103120489)ReConnected, TolCount:1
