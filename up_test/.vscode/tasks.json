@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",                              // build任务
+            "type": "shell",
+            // "command": "make -f Makefile"
+            "command" : "qmake",
+            "args": [
+                "-I","${workspaceFolder}/",
+
+                "-g",
+                "${workspaceFolder}/mainwindow.cpp",
+                "${workspaceFolder}/main.cpp",
+
+            ],
+        }
+    ]
+}
