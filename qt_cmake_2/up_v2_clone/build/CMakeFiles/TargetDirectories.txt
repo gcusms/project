@@ -1,0 +1,4 @@
+/home/sms/workspace/qt_cmake_2/up_v2_clone/build/CMakeFiles/rebuild_cache.dir
+/home/sms/workspace/qt_cmake_2/up_v2_clone/build/CMakeFiles/up_test_successful.dir
+/home/sms/workspace/qt_cmake_2/up_v2_clone/build/CMakeFiles/edit_cache.dir
+/home/sms/workspace/qt_cmake_2/up_v2_clone/build/CMakeFiles/up_test_successful_autogen.dir
